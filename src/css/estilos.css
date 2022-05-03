@@ -1,0 +1,260 @@
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+a{
+  text-decoration: none;
+}
+.Header {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  height: 60px;
+  background-color: #282D31;
+  color: #FAFDFF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.Header p {
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+}
+
+.container {
+  background: #007BDF;
+  padding: 1em 0;
+  position: relative;
+  top: 60px;
+}
+
+.l-container {
+  width: 100%;
+  max-width: 1344px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sec-search {
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.SearchBox {
+  display: flex;
+  padding: 10px 10px;
+  border-radius: 6px;
+  width: 50%;
+  background-color: #FAFDFF;
+}
+
+.SearchIcon {
+  width: 32px;
+  height: 32px;
+}
+
+.SearchInput {
+  width: 100%;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  margin-left: 15px;
+}
+.btn_enviar {
+  margin-left: 1em;
+	background: #424949;
+    border: 0;
+    padding: .7em 1.4em;
+    border-radius: 4px;
+    color: #e4e4e4;
+    text-transform: uppercase;
+    font-size: 14px;
+	font-weight: bold;
+}
+
+.btn_enviar:hover,.btn_enviar:focus {
+	cursor: pointer;
+    background: #4D5656;
+    color: #ffffff;
+    outline: 0;
+    transition: background-color 2s ease-out;
+}
+@media (max-width: 800px) {
+  .SearchBox {
+    width: 100%;
+  }
+}
+.detalle-info {
+  position: relative;
+  top: 60px;
+  background: #FAFDFF;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr) 40px;
+  grid-template-rows: auto;
+  justify-content: center;
+}
+
+.detalle-img {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.detalle-txt {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  display: flex;
+  flex-direction: column;
+  padding-left: 1em;
+}
+
+.info-title {
+  font-weight: 600;
+  color: #53575A;
+  line-height: 1.5;
+  overflow: hidden;
+  text-transform: capitalize;
+ /* white-space: nowrap;
+  text-overflow: ellipsis;*/
+}
+
+.info-title span {
+  opacity: 0.8;
+}
+
+.info-txt {
+  font-size: 16px;
+  font-weight: 500;
+  color: #53575A;
+  overflow: hidden;
+  margin: 4px 0;
+  text-transform: capitalize;
+  text-overflow: ellipsis;
+}
+
+.info-txt span {
+  opacity: 0.5;
+}
+
+.link-home{
+    width: 80px;
+    padding: 0.4em 0.8em;
+    border-radius: 5px;
+    background: #007BDF;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 1em;
+}
+
+@media (max-width: 800px) {
+  .detalle-info {
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+  }
+
+  .detalle-img {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+
+  .detalle-txt {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+
+  .close {
+    padding-top: 0;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+.container-card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: auto;
+  grid-gap: 1em;
+  padding: 1em;
+}
+
+.card {
+  background: #FAFDFF;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card-img {
+  overflow: hidden;
+  position: relative;
+}
+
+.card-img:hover:after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.card-img img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: all 0.4s;
+}
+
+.card-img:hover img {
+  transform: scale(1.1);
+}
+
+.movie-name {
+  padding: 10px;
+}
+
+.movie-name span {
+  font-size: 18px;
+  font-weight: 600;
+  color: #282D31;
+  margin: 15px 0;
+}
+
+.info-movie {
+  padding: 10px;
+  padding-top: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.info-movie span {
+  font-size: 16px;
+  font-weight: 500;
+  color: #282D31;
+  white-space: nowrap;
+  overflow: hidden;
+  text-transform: capitalize;
+  text-overflow: ellipsis;
+}
+
+/**************************************/
+@media (max-width: 800px) {
+  .container-card {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
