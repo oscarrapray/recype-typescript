@@ -16,7 +16,6 @@ export const Recipe = ({res}:props) =>{
                <span >{label}</span>
               </div>
               <div className="info-movie">
-                <span >see recipe</span>
               </div>
     </div>
 )
