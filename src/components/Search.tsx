@@ -11,11 +11,11 @@ export const Search = ({setSearch}:argSearch) =>{
   const [ termino, setTermino] = useState('')
   const [error, setError] = useState(false);
 
-  const onSearchChange = (e:any) => {
+  const onSearchChange = (e:React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setTermino(e.target.value)
     
 }
-const handleSubmit = (e:any) => {
+const handleSubmit = (e:React.FormEvent<HTMLFormElement>) => {
   e.preventDefault();
 
   // validar
