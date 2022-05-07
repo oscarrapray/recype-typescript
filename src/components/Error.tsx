@@ -1,6 +1,9 @@
 import React from 'react'
 
-const Error = ({mensaje}) =>{
+interface argError {
+    mensaje: string
+}
+const Error = ({mensaje}:argError) =>{
     return(
         <p>{mensaje}</p>
     )
