@@ -2,16 +2,20 @@ import React, { useState } from 'react'
 import Error from './Error'
 import logo from '../img/search-icon.svg'
 
-export const Search = ({setSearch}) =>{
+interface argSearch {
+  setSearch:React.Dispatch<React.SetStateAction<string>>
+}
+
+export const Search = ({setSearch}:argSearch) =>{
   
   const [ termino, setTermino] = useState('')
   const [error, setError] = useState(false);
 
-  const onSearchChange = (e):void => {
+  const onSearchChange = (e:any) => {
     setTermino(e.target.value)
     
 }
-const handleSubmit = e => {
+const handleSubmit = (e:any) => {
   e.preventDefault();
 
   // validar
